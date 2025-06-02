@@ -616,7 +616,8 @@ p{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    padding-block-start: 30px;
+    padding-block-start: 10px;
+    gap: 20px;
 }
 
 .contact__socials-item {
@@ -642,7 +643,8 @@ p{
 
 .socials__github-icon, 
 .socials__linkedin-icon,
-.socials__researchgate-icon {
+.socials__researchgate-icon, 
+.socials__insta-icon {
   width: clamp(18px, 2.2vw + 12px, 36px);
   height: clamp(18px, 2.2vw + 12px, 36px);
 }
@@ -729,6 +731,8 @@ p{
 
     .contact__socials {
         padding-block-start: 0;
+        /* Adjust padding block end when adding new socials items */
+        padding-block-end: 35px;
         grid-auto-flow: row;
         grid-auto-rows: 1fr;
         gap: 5px;
