@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
     try{
       console.log("It worked! Now sending form");
       const formData = new FormData(form); 
-      const response = await fetch("https://fsfdogptmh.execute-api.ap-southeast-2.amazonaws.com/form-submission", {
+      const response = await fetch("https://9qewdyubjj.execute-api.ap-southeast-2.amazonaws.com/form-submission", {
         method: "POST",
         body: JSON.stringify(Object.fromEntries(formData)),
         mode: 'cors', 
