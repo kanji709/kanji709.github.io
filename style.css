@@ -1114,3 +1114,22 @@ nav.article-nav {
         text-align: right;
     }
 }
+
+/* ---- Card art captions ---- */
+.blog__item-art {
+    margin: 16px 20px 0;
+    padding-top: 14px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #9a9a9a;
+}
+
+.blog__item-art > span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #cfcfcf;
+}
