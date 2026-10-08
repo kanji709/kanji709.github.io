@@ -1,16 +1,19 @@
 const form = document.querySelector(".contact__form");
 const formUserName = document.getElementById("name");
 const formUserEmail = document.getElementById("email");
+const formStatus = document.querySelector(".contact__status");
+const formButton = document.querySelector(".contact__button");
+const setStatus = (msg) => { if (formStatus) formStatus.textContent = msg; };
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (!formUserName.validity.valid || !formUserEmail.validity.valid) {
-    console.log("Not valid");
-    //Add custom validation msg code here
+    setStatus("Please add your name and a valid email address.");
     return;
   } else {
     try{
-      console.log("It worked! Now sending form");
+      setStatus("Sending…");
+      formButton.disabled = true;
       const formData = new FormData(form); 
       const response = await fetch("https://9qewdyubjj.execute-api.ap-southeast-2.amazonaws.com/form-submission", {
         method: "POST",
@@ -27,10 +30,14 @@ form.addEventListener("submit", async (e) => {
       if (!response.ok){
         throw new Error(`HTTP error. ${response.status}`);
       }
+      form.reset();
+      setStatus("Thanks, your message has been sent. I'll get back to you soon.");
 
     } catch(error) {
       console.log(`Failed to submit form. Network error: ${error}`);
-      //Add custom error msg here
+      setStatus("Sorry, something went wrong. Please email me at jie.kang@sydney.edu.au instead.");
+    } finally {
+      formButton.disabled = false;
     }
 
   }

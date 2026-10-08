@@ -382,7 +382,7 @@ p{
 }
 
 .about__picture > img {
-    border-radius: 50%;
+    border-radius: 5px;
     margin-bottom: 16px;
 }
 
@@ -609,6 +609,7 @@ p{
 .contact__email {
     display: block;
     text-decoration: underline;
+    margin-bottom: 6px;
 
 }
 
@@ -644,13 +645,16 @@ p{
 .socials__github-icon, 
 .socials__linkedin-icon,
 .socials__researchgate-icon, 
-.socials__insta-icon {
+.socials__insta-icon,
+.socials__scholar-icon,
+.socials__orcid-icon {
   width: clamp(18px, 2.2vw + 12px, 36px);
   height: clamp(18px, 2.2vw + 12px, 36px);
 }
 
 .socials__researchgate-icon {
     border-radius: 2px;
+    filter: grayscale(1);
 }
 
 .contact__form {
@@ -960,3 +964,153 @@ nav.article-nav {
 .bloglist__item > p {
     text-align: center;
 } */
+/* ---- Bio + Research section (added Oct 2026) ---- */
+.about__bio {
+    margin-bottom: 24px;
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+.research__wrapper {
+    padding-block: 40px;
+}
+
+.research .research__wrapper > .blog__headline,
+.research .research__wrapper > .research__intro:only-of-type {
+    text-align: center;
+}
+
+.research .research__wrapper:has(> a.button) {
+    text-align: center;
+}
+
+.research__links {
+    margin-top: 30px;
+}
+
+.research__intro {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.research__pubs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    display: grid;
+    gap: 16px;
+}
+
+.research__pubs .subtext {
+    display: block;
+    margin-top: 4px;
+}
+
+.research__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.blog__item > img {
+    object-fit: cover;
+    background-color: #111111;
+}
+
+/* ---- Publications list ---- */
+.research__subhead {
+    margin: 40px 0 8px;
+}
+
+.pubs__year {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-block: 20px;
+    border-top: 1px solid #333;
+}
+
+.pubs__year-label {
+    font-size: 1rem;
+    color: #9a9a9a;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pubs__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 18px;
+}
+
+.pubs__item > a {
+    color: var(--text-colour-white);
+    font-weight: 600;
+    line-height: 1.45;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+.pubs__item > a:hover {
+    color: #cfcfcf;
+    border-bottom-color: var(--text-colour-white);
+}
+
+.pubs__meta {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #a8a8a8;
+}
+
+.pubs__meta strong {
+    color: var(--text-colour-white);
+}
+
+.research__more {
+    margin: 30px 0 12px;
+}
+
+@media (min-width: 37.5em) {
+    .pubs__year {
+        grid-template-columns: 8rem 1fr;
+        gap: 24px;
+    }
+}
+
+/* ---- Contact extras + blog empty state ---- */
+.contact__status {
+    min-height: 1.5em;
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    color: #cfcfcf;
+}
+
+.contact__button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.bloglist__empty {
+    padding-block: 40px;
+    color: #9a9a9a;
+}
+
+.contact__control.align-right {
+    flex-wrap: wrap;
+}
+
+.contact__control.align-right > .contact__status {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media (min-width: 62.5em) {
+    .contact__control.align-right > .contact__status {
+        text-align: right;
+    }
+}

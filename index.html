@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>G</title>
-        <meta name="description" content="">
+        <title>Jie Kang (康杰) | Applied Statistician</title>
+        <meta name="description" content="Jie Kang is an applied statistician and quantitative geneticist at the University of Sydney, developing statistical methods for genomic prediction, early detection of health changes and resilience.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://kanji709.github.io/">
+        <meta property="og:title" content="Jie Kang (康杰) | Applied Statistician">
+        <meta property="og:description" content="Applied statistician and quantitative geneticist at the University of Sydney.">
+        <meta property="og:image" content="https://kanji709.github.io/assets/pics/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+        <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +32,7 @@
                 </label>
                 <div class="menu-dropdown">
                     <a href="#about">About</a>
+                    <a href="#research">Research</a>
                     <a href="#blog">Blog</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -51,10 +59,11 @@
                         <img 
                         class="about__image" 
                         src="assets/pics/kangjie-mobile.jpg" 
-                        alt="picture of Kang Jie">
+                        alt="Portrait of Jie Kang">
                     </picture>
                     <div class="about__text">
                         <h1 class="about__headline"> I seek to solve. <br>To see. <span>To serve.</span></h1>
+                        <p class="about__bio">I'm a Lecturer in Applied Statistics in the School of Mathematics and Statistics at the University of Sydney. My research asks why individuals respond differently to biological and environmental challenges. I develop statistical methods for genomic prediction, early detection of health changes and quantifying resilience, across agriculture and health.</p>
                         <p class="about__description">"In God we trust. All others must bring data."<br> - William Edwards Deming</p>    
                     </div>
                 </div>
@@ -75,31 +84,37 @@
                     </div>
                 </div>
             </section>
+            <section class="research" id="research">
+                <div class="wrapper research__wrapper section-border">
+                    <h2 class="blog__headline">Research</h2>
+                    <p class="research__intro">Why do individuals respond differently to biological and environmental challenges?</p>
+                    <a href="publications.html" class="button">See my publications</a>
+                </div>
+            </section>
             <section class="blog" id="blog">
                 <div class="wrapper blog__wrapper section-border">
                     <h2 class="blog__headline">Work + Life</h2>
                     <div class="blog__grid">
-                        <div class="blog__item"> 
-<!-- Fill out the src and alt fields in "img" tags.  -->
-                            <img src="" alt="">
-                            <h3 class="blog__item-headline">Title here</h3>
-                            <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                        </div> 
-                        <div class="blog__item"> 
-                            <img src="" alt="">
-                            <h3 class="blog__item-headline">Title here</h3>
-                            <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                        </div> 
-                        <div class="blog__item"> 
-                            <img src="" alt="">
-                            <h3 class="blog__item-headline">Title here</h3>
-                            <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                        </div> 
-                        <div class="blog__item"> 
-                            <img src="" alt="">
-                            <h3 class="blog__item-headline">Title here</h3>
-                            <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                        </div> 
+                        <div class="blog__item">
+                            <img src="assets/pics/card-genomics.svg" alt="Abstract double helix">
+                            <h3 class="blog__item-headline">Genomic prediction</h3>
+                            <p class="blog__item-description">Statistical methods that turn genomic data into better predictions of performance, health and resilience.</p>
+                        </div>
+                        <div class="blog__item">
+                            <img src="assets/pics/card-early-detection.svg" alt="Abstract signal trace with an early warning point">
+                            <h3 class="blog__item-headline">Early detection</h3>
+                            <p class="blog__item-description">Using routinely collected data to spot health changes early, before they become visible problems.</p>
+                        </div>
+                        <div class="blog__item">
+                            <img src="assets/pics/card-resilience.svg" alt="Abstract curve dipping and recovering">
+                            <h3 class="blog__item-headline">Resilience to stress</h3>
+                            <p class="blog__item-description">Measuring why some individuals cope with biological and environmental challenges better than others.</p>
+                        </div>
+                        <div class="blog__item">
+                            <img src="assets/pics/card-collaboration.svg" alt="Abstract network linking three points">
+                            <h3 class="blog__item-headline">Across three countries</h3>
+                            <p class="blog__item-description">Working across agriculture and health with partners in Australia, New Zealand and Ireland.</p>
+                        </div>
                     </div>
                     <a 
                     href="bloglist.html"  
@@ -114,13 +129,14 @@
                     <div class="contact__text">
                         <p>《论语·里仁》: “朝聞道，夕死可矣。”</p>
                         <h3 class="contact__name">Jie Kang</h3>
+                        <a class="contact__email" href="mailto:jie.kang@sydney.edu.au">jie.kang@sydney.edu.au</a>
+                        <a class="contact__email" href="assets/Jie_Kang_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
                         <div class="contact__socials">
-    <!-- Fill out the "href" fields here. I've already put in your Github and Linkedin -->
-                           <!-- <div 
+                            <div 
                             class="contact__socials-item">
                                 <a class="socials__github" href="https://github.com/kanji709" target="_blank">
                                     <span class="subtext">Github</span>
-                                    <img src="assets/icons/icon-github.png" class="socials__github-icon">                                    
+                                    <img src="assets/icons/icon-github.png" class="socials__github-icon" alt="GitHub">                                    
                                 </a>
                             </div>
                              <div 
@@ -128,19 +144,31 @@
                             >
                                 <a class="socials__researchgate" href="https://www.researchgate.net/profile/Jie-Kang-6" target="_blank">
                                     <span class="subtext">ResearchGate</span>
-                                    <img src="assets/icons/icon-researchgate.png" class="socials__researchgate-icon">
+                                    <img src="assets/icons/icon-researchgate.png" class="socials__researchgate-icon" alt="ResearchGate">
                                 </a>
-                            </div> -->
+                            </div>
+                            <div class="contact__socials-item">
+                                <a class="socials__scholar" href="https://scholar.google.com/citations?user=MAsn6mYAAAAJ&hl=en" target="_blank" rel="noopener">
+                                    <span class="subtext">Google Scholar</span>
+                                    <img src="assets/icons/icon-scholar.svg" class="socials__scholar-icon" alt="Google Scholar">
+                                </a>
+                            </div>
+                            <div class="contact__socials-item">
+                                <a class="socials__orcid" href="https://orcid.org/0000-0002-9619-5775" target="_blank" rel="noopener">
+                                    <span class="subtext">ORCID</span>
+                                    <img src="assets/icons/icon-orcid.svg" class="socials__orcid-icon" alt="ORCID">
+                                </a>
+                            </div>
                             <div class="contact__socials-item">
                                 <a class="socials__linkedin" href="https://www.linkedin.com/in/jie-kang-nz/" target="_blank">
                                     <span class="subtext">Linkedin</span>
-                                    <img src="assets/icons/icon-linkedin.png" class="socials__linkedin-icon">
+                                    <img src="assets/icons/icon-linkedin.png" class="socials__linkedin-icon" alt="LinkedIn">
                                 </a>
                             </div>
                             <div class="contact__socials-item">
                                 <a class="socials__insta" href="https://www.instagram.com/kang_jie_whatever/#" target="_blank">
                                     <span class="subtext">Instagram</span>
-                                    <img src="assets/icons/icon-insta.png" class="socials__insta-icon">
+                                    <img src="assets/icons/icon-insta.png" class="socials__insta-icon" alt="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -149,18 +177,19 @@
                         <div class="contact__control">
                             <label for="name"></label>
                             <input type="text" id="name" name="user_name"  placeholder="Name" maxlength="30" required></input>
-                            <img src="assets/icons/icon-error.svg" class="contact__invalid-icon">
+                            <img src="assets/icons/icon-error.svg" class="contact__invalid-icon" alt="Invalid input">
                         </div>
                         <div class="contact__control">
                             <label for="email"></label>
                             <input type="email" id="email" name="user_email" placeholder="Email" required></input>
-                            <img src="assets/icons/icon-error.svg" class="contact__invalid-icon">
+                            <img src="assets/icons/icon-error.svg" class="contact__invalid-icon" alt="Invalid input">
                         </div>
                         <div class="contact__control">
                             <label for="message"></label>
                             <textarea id="message" name="user_message" placeholder="Message" cols="30" rows="3" maxlength="300"></textarea>
                         </div>
                         <div class="contact__control align-right">
+                            <p class="contact__status" role="status" aria-live="polite"></p>
                             <button type="submit" class="button contact__button">Send</button>
                         </div>
                     </form>
@@ -170,7 +199,7 @@
         <footer class="footer">
             <div class="wrapper footer__wrapper">
                 <div class="footer__item subtext">
-                    <p>© 2025 Jie Kang</p>
+                    <p>© 2026 Jie Kang</p>
                 </div>
                 <div class="footer__item made-by-message">
                     <a href="https://jordan-young.com">Website designed, built and maintained by Jordan Young</a>
