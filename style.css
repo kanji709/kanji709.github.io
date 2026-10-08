@@ -1189,3 +1189,10 @@ em, i {
 .pubs__meta em {
     color: #cfcfcf;
 }
+
+.contact__gloss {
+    margin-top: 6px;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: #9a9a9a;
+}
