@@ -35,7 +35,7 @@ html {
 }
 
 body, input, textarea {
-    font-family: "Pathway Extreme", sans-serif;
+    font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body{
@@ -679,7 +679,7 @@ p{
     color: var(--text-colour-white);
     font-size: 1rem;
     line-height: 1.625;
-    font-family: 'Urbanist', sans-serif;
+    font-family: inherit;
     padding: 16px 24px;
     margin-block-end: 24px
 }
@@ -1131,5 +1131,61 @@ nav.article-nav {
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    color: #cfcfcf;
+}
+
+/* ---- Typography: Inter Tight, sentence case, tight tracking (matches Data^Impact) ---- */
+body, input, textarea, button {
+    font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+h1 {
+    letter-spacing: -0.055em;
+}
+
+h2 {
+    letter-spacing: -0.035em;
+}
+
+h3, h4 {
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+strong, b {
+    font-weight: 500;
+}
+
+em, i {
+    font-style: normal;
+}
+
+.button,
+.contact__control > *::placeholder,
+.pubs__year-label,
+.blog__item-art > span {
+    text-transform: none;
+    letter-spacing: -0.01em;
+}
+
+.button {
+    font-weight: 500;
+}
+
+.pubs__item > a {
+    font-weight: 500;
+}
+
+.pubs__year-label,
+.blog__item-art > span {
+    font-size: 0.9rem;
+}
+
+.pubs__meta em {
     color: #cfcfcf;
 }
