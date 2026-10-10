@@ -814,6 +814,18 @@ p{
     color: #9a9a9a;
 }
 
+.made-by-message > a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer__seal > img {
+    display: block;
+    margin-inline: auto;
+    opacity: 0.85;
+}
+
 /*############################# START BLOGTEMPLATE STYLES #############################*/
 /*                                                                                     */
 /*############################# ARTICLE-DETAILS styles ###################################*/
