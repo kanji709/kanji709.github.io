@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Original site design by Jordan Young; adapted by Jie Kang. -->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -42,7 +43,7 @@
             <section class="intro">
                 <div class="wrapper">
                     <div class="intro__container">
-                        <h1 class="intro__headline">您好，<br>我是康杰</h1>
+                        <h1 class="intro__headline"><span>您好，</span><span>我是康杰</span></h1>
                         <p class="intro__tagline"><span class="intro__tagline-highlight">Hello, I’m Jie Kang.</span></p> 
                     </div>    
                 </div>
@@ -63,7 +64,7 @@
                     </picture>
                     <div class="about__text">
                         <h1 class="about__headline"> I seek to solve. <br>To see. <span>To serve.</span></h1>
-                        <p class="about__bio">I’m a Lecturer in Applied Statistics at the University of Sydney’s School of Mathematics and Statistics. My research asks why individuals respond differently to biological and environmental challenges. I build statistical and machine-learning methods for genomic prediction, early detection of health changes and measuring resilience, in both agriculture and human health.</p>
+                        <p class="about__bio">I’m a Lecturer in Applied Statistics at the University of Sydney. I build statistical and machine-learning methods for agriculture and human health.</p>
                         <p class="about__description">“In God we trust. All others must bring data.”<br>— W. Edwards Deming</p>    
                     </div>
                 </div>
@@ -84,47 +85,52 @@
                     </div>
                 </div>
             </section>
-            <section class="research" id="research">
-                <div class="wrapper research__wrapper section-border">
+            <section class="blog" id="research">
+                <div class="wrapper blog__wrapper section-border">
                     <h2 class="blog__headline">Research</h2>
                     <p class="research__intro">Why do individuals respond differently to biological and environmental challenges?</p>
-                    <a href="publications.html" class="button">See my publications</a>
-                </div>
-            </section>
-            <section class="blog" id="blog">
-                <div class="wrapper blog__wrapper section-border">
-                    <h2 class="blog__headline">What I work on</h2>
                     <div class="blog__grid">
                         <div class="blog__item">
-                            <img src="assets/pics/card-genomics.svg" alt="Pascal's triangle modulo 2">
+                            <figure class="blog__art" tabindex="0">
+                                <img src="assets/pics/card-genomics.svg" alt="Pascal's triangle modulo 2">
+                                <figcaption class="blog__art-reveal">Binomial coefficients, kept only when odd, fold into a Sierpi&#324;ski triangle: the arithmetic of Mendelian inheritance, repeated generation after generation.</figcaption>
+                            </figure>
                             <h3 class="blog__item-headline">Genomic prediction</h3>
-                            <p class="blog__item-description">Statistical methods that turn genomic data into better predictions of performance, health and resilience.</p>
-                            <p class="blog__item-art"><span>Pascal&rsquo;s triangle, mod 2</span> Binomial coefficients, kept only when odd, fold into a Sierpi&#324;ski triangle: the arithmetic of Mendelian inheritance, repeated generation after generation.</p>
+                            <p class="blog__item-description">Turning genomic data into better predictions.</p>
+                            <p class="blog__item-label"><i>Pascal&rsquo;s triangle</i> &middot; <span class="eq">C(n, k) mod 2</span></p>
                         </div>
                         <div class="blog__item">
-                            <img src="assets/pics/card-early-detection.svg" alt="The Lorenz attractor">
+                            <figure class="blog__art" tabindex="0">
+                                <img src="assets/pics/card-early-detection.svg" alt="The Lorenz attractor">
+                                <figcaption class="blog__art-reveal">A deterministic system that switches between two states, where small changes grow quickly. That’s why catching a shift early matters.</figcaption>
+                            </figure>
                             <h3 class="blog__item-headline">Early detection</h3>
-                            <p class="blog__item-description">Using routinely collected data to spot health changes before they become visible problems.</p>
-                            <p class="blog__item-art"><span>The Lorenz attractor</span> A deterministic system that switches between two states, where small changes grow quickly. That’s why catching a shift early matters.</p>
+                            <p class="blog__item-description">Spotting health changes before they show.</p>
+                            <p class="blog__item-label"><i>Lorenz attractor</i> &middot; <span class="eq">ẋ = σ(y − x)</span></p>
                         </div>
                         <div class="blog__item">
-                            <img src="assets/pics/card-resilience.svg" alt="A hyperboloid of one sheet drawn from straight lines">
+                            <figure class="blog__art" tabindex="0">
+                                <img src="assets/pics/card-resilience.svg" alt="A hyperboloid of one sheet drawn from straight lines">
+                                <figcaption class="blog__art-reveal">A curved surface made only of straight lines. The same geometry keeps cooling towers light and strong.</figcaption>
+                            </figure>
                             <h3 class="blog__item-headline">Resilience to stress</h3>
-                            <p class="blog__item-description">Quantifying how well individuals cope with, and recover from, biological and environmental stress.</p>
-                            <p class="blog__item-art"><span>A hyperboloid of one sheet</span> A curved surface made only of straight lines. The same geometry keeps cooling towers light and strong.</p>
+                            <p class="blog__item-description">Measuring how individuals cope and recover.</p>
+                            <p class="blog__item-label"><i>Hyperboloid</i> &middot; <span class="eq">x² + y² − z² = 1</span></p>
                         </div>
                         <div class="blog__item">
-                            <img src="assets/pics/card-collaboration.svg" alt="Borromean rings">
-                            <h3 class="blog__item-headline">Across three countries</h3>
-                            <p class="blog__item-description">Collaborating across agriculture and health with partners in Australia, New Zealand and Ireland.</p>
-                            <p class="blog__item-art"><span>Borromean rings</span> No two rings are linked, yet the three can&rsquo;t be pulled apart. Remove any one and the others fall free.</p>
+                            <figure class="blog__art" tabindex="0">
+                                <img src="assets/pics/card-collaboration.svg" alt="Borromean rings">
+                                <figcaption class="blog__art-reveal">No two rings are linked, yet together they can&rsquo;t be pulled apart. Remove any one and the others fall free.</figcaption>
+                            </figure>
+                            <h3 class="blog__item-headline">Collaboration</h3>
+                            <p class="blog__item-description">Working with partners across disciplines and borders.</p>
+                            <p class="blog__item-label"><i>Borromean rings</i> &middot; <span class="eq">lk(A, B) = 0</span></p>
                         </div>
                     </div>
-                    <a 
-                    href="bloglist.html"  
-                    class="blog-link button">
-                        <span>Read the blog</span>
-                    </a>
+                    <div class="research__links">
+                        <a href="publications.html" class="button">Publications</a>
+                        <a href="bloglist.html" class="blog-link button" id="blog">Blog</a>
+                    </div>
                 </div>
             </section>
             <section class="contact" id="contact">
@@ -134,24 +140,8 @@
                         <p>“朝闻道，夕死可矣。”——《论语·里仁》</p>
                         <p class="contact__gloss">“Hear the Way in the morning, and you may die content in the evening.” (Analects 4.8)</p>
                         <h3 class="contact__name">Jie Kang</h3>
-                        <a class="contact__email" href="mailto:jie.kang@sydney.edu.au">jie.kang@sydney.edu.au</a>
-                        <a class="contact__email" href="assets/Jie_Kang_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+                        <p class="contact__links"><a href="mailto:jie.kang@sydney.edu.au">jie.kang@sydney.edu.au</a></p>
                         <div class="contact__socials">
-                            <div 
-                            class="contact__socials-item">
-                                <a class="socials__github" href="https://github.com/kanji709" target="_blank">
-                                    <span class="subtext">GitHub</span>
-                                    <img src="assets/icons/icon-github.png" class="socials__github-icon" alt="GitHub">                                    
-                                </a>
-                            </div>
-                             <div 
-                            class="contact__socials-item"
-                            >
-                                <a class="socials__researchgate" href="https://www.researchgate.net/profile/Jie-Kang-6" target="_blank">
-                                    <span class="subtext">ResearchGate</span>
-                                    <img src="assets/icons/icon-researchgate.png" class="socials__researchgate-icon" alt="ResearchGate">
-                                </a>
-                            </div>
                             <div class="contact__socials-item">
                                 <a class="socials__scholar" href="https://scholar.google.com/citations?user=MAsn6mYAAAAJ&hl=en" target="_blank" rel="noopener">
                                     <span class="subtext">Google Scholar</span>
@@ -159,21 +149,9 @@
                                 </a>
                             </div>
                             <div class="contact__socials-item">
-                                <a class="socials__orcid" href="https://orcid.org/0000-0002-9619-5775" target="_blank" rel="noopener">
-                                    <span class="subtext">ORCID</span>
-                                    <img src="assets/icons/icon-orcid.svg" class="socials__orcid-icon" alt="ORCID">
-                                </a>
-                            </div>
-                            <div class="contact__socials-item">
                                 <a class="socials__linkedin" href="https://www.linkedin.com/in/jie-kang-nz/" target="_blank">
                                     <span class="subtext">LinkedIn</span>
                                     <img src="assets/icons/icon-linkedin.png" class="socials__linkedin-icon" alt="LinkedIn">
-                                </a>
-                            </div>
-                            <div class="contact__socials-item">
-                                <a class="socials__insta" href="https://www.instagram.com/kang_jie_whatever/#" target="_blank">
-                                    <span class="subtext">Instagram</span>
-                                    <img src="assets/icons/icon-insta.png" class="socials__insta-icon" alt="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -204,10 +182,7 @@
         <footer class="footer">
             <div class="wrapper footer__wrapper">
                 <div class="footer__item subtext">
-                    <p>© 2026 Jie Kang</p>
-                </div>
-                <div class="footer__item made-by-message">
-                    <a href="https://jordan-young.com">Original design by Jordan Young</a>
+                    <p>© 2026 Jie Kang &nbsp;<span class="made-by-message">·&nbsp; Original design by Jordan Young</span></p>
                 </div>
             </div>
         </footer>

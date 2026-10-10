@@ -76,7 +76,7 @@ a:hover{
 }
 
 a:focus-visible, input:focus-visible, textarea:focus-visible {
-    outline: 2px dashed #71A6D1;
+    outline: 2px dashed var(--text-colour-white);
     outline-offset: 2px;
 }
 
@@ -301,8 +301,8 @@ p{
 
 .intro__headline{
     text-align: center;
-    background: linear-gradient(to right, #71A6D1,#99C4E1, #ACD3E8,
-     #C0E2F0, #D4F1F8, #C0E2F0, #ACD3E8, #99C4E1, #71A6D1);
+    background: linear-gradient(to right, #8a8a8a, #b0b0b0, #d4d4d4,
+     #ededed, #ffffff, #ededed, #d4d4d4, #b0b0b0, #8a8a8a);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -315,14 +315,18 @@ p{
     }
 }
 
+.intro__headline > span {
+    white-space: nowrap;
+}
+
 .intro__tagline{
     text-align: center;
     margin: 0;
 }
 
 .intro__tagline-highlight{
-    background: linear-gradient(to right, #71A6D1,#99C4E1, #ACD3E8,
-    #C0E2F0, #D4F1F8, #C0E2F0, #ACD3E8, #99C4E1, #71A6D1);
+    background: linear-gradient(to right, #8a8a8a, #b0b0b0, #d4d4d4,
+     #ededed, #ffffff, #ededed, #d4d4d4, #b0b0b0, #8a8a8a);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -525,7 +529,7 @@ p{
 }
 
 .blog__headline {
-    margin-block-end: 20px;
+    margin-block-end: 12px;
 }
 
 .blog__grid {
@@ -541,22 +545,33 @@ p{
     padding-bottom: 20px;
 }
 
-/* Remove the height for this img until content is here*/
-.blog__item > img {
-    width: 100%;
-    height: 240px;
+.blog__art {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
     border-radius: 5px 5px 0 0;
-    display: inline-block;
+}
+
+.blog__art > img {
+    width: 100%;
+    height: 170px;
+    display: block;
+    object-fit: contain;
+    background-color: #111111;
+    transition: opacity 0.35s ease;
 }
 
 .blog__item-headline {
-    padding: 20px;
+    padding: 20px 20px 6px;
     margin-block-end: 0;
 }
 
 .blog__item-description {
     display: inline-block;
     padding-inline: 20px;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #9a9a9a;
 }
 
 .blog__item-codepen{
@@ -575,6 +590,20 @@ p{
 }
 
 @media (min-width: 62.5em) {
+    .blog__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    /* Narrow cards: crop to the centred drawing instead of shrinking it */
+    .blog__art > img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .blog__item-headline {
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -606,11 +635,13 @@ p{
     margin-bottom: 10px;
 }
 
-.contact__email {
-    display: block;
-    text-decoration: underline;
-    margin-bottom: 6px;
+.contact__links {
+    margin: 0 0 20px;
+}
 
+.contact__links > a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .contact__socials{
@@ -642,19 +673,10 @@ p{
     display: none;
 }
 
-.socials__github-icon, 
 .socials__linkedin-icon,
-.socials__researchgate-icon, 
-.socials__insta-icon,
-.socials__scholar-icon,
-.socials__orcid-icon {
+.socials__scholar-icon {
   width: clamp(18px, 2.2vw + 12px, 36px);
   height: clamp(18px, 2.2vw + 12px, 36px);
-}
-
-.socials__researchgate-icon {
-    border-radius: 2px;
-    filter: grayscale(1);
 }
 
 .contact__form {
@@ -724,7 +746,7 @@ p{
         flex-direction: column;
     }
 
-    .contact__text > :nth-child(2){
+    .contact__text > .contact__name {
         margin-top: auto;
     }
 
@@ -789,7 +811,7 @@ p{
 }
 
 .made-by-message {
-    text-decoration: underline;
+    color: #9a9a9a;
 }
 
 /*############################# START BLOGTEMPLATE STYLES #############################*/
@@ -1009,12 +1031,8 @@ nav.article-nav {
 .research__links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
-}
-
-.blog__item > img {
-    object-fit: cover;
-    background-color: #111111;
 }
 
 /* ---- Publications list ---- */
@@ -1115,23 +1133,55 @@ nav.article-nav {
     }
 }
 
-/* ---- Card art captions ---- */
-.blog__item-art {
-    margin: 16px 20px 0;
-    padding-top: 14px;
-    border-top: 1px solid #2a2a2a;
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: #9a9a9a;
+/* ---- Card art: gallery label, explanation revealed on hover/tap ---- */
+.blog__art-reveal {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #d4d4d4;
+    background: rgba(17, 17, 17, 0.82);
+    opacity: 0;
+    transition: opacity 0.35s ease;
 }
 
-.blog__item-art > span {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #cfcfcf;
+.blog__art:hover > .blog__art-reveal,
+.blog__art:focus > .blog__art-reveal {
+    opacity: 1;
+}
+
+.blog__art:hover > img,
+.blog__art:focus > img {
+    opacity: 0.3;
+}
+
+.blog__art:focus {
+    outline: none;
+}
+
+.blog__art:focus-visible {
+    outline: 2px dashed var(--text-colour-white);
+    outline-offset: -2px;
+}
+
+.blog__item-label {
+    margin: 14px 20px 0;
+    font-size: 0.8rem;
+    color: #6f6f6f;
+}
+
+.blog__item-label > i {
+    font-style: italic;
+}
+
+.blog__item-label > .eq {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-style: italic;
+    color: #8a8a8a;
 }
 
 /* ---- Typography: Inter Tight, sentence case, tight tracking (matches Data^Impact) ---- */
@@ -1167,8 +1217,7 @@ em, i {
 
 .button,
 .contact__control > *::placeholder,
-.pubs__year-label,
-.blog__item-art > span {
+.pubs__year-label {
     text-transform: none;
     letter-spacing: -0.01em;
 }
@@ -1181,8 +1230,7 @@ em, i {
     font-weight: 500;
 }
 
-.pubs__year-label,
-.blog__item-art > span {
+.pubs__year-label {
     font-size: 0.9rem;
 }
 
